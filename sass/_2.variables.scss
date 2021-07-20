@@ -1,0 +1,60 @@
+// Light Color Palette (Custom Properties)
+html {
+  --color-primary: hsl(87, 98%, 34%);
+  --color-primary-m: hsla(87, 100%, 45%, 0.55);
+  --color-secondary: hsl(274, 99%, 72%);
+  --color-secondary-m: hsl(274, 99%, 72%, 0.6);
+  --color-tertiary: hsl(185, 36%, 47%);
+  --color-tertiary-m: rgba(38, 52, 65, 0.836);
+  --color-quaternary: rgb(255, 235, 153);
+  --color-quaternary-m: rgba(192, 162, 43, 0.65);
+  --color-quinary: white;
+  --color-quinary-m: rgba(255, 255, 255, 0.5);
+  --color-deep: #000;
+}
+// Dark Color Palette (Custom Properties)
+html[data-theme="dark"] {
+  --color-primary: rgb(36, 38, 43);
+  --color-primary-m: rgba(36, 38, 43, 0.65);
+  --color-secondary: rgb(124, 185, 8);
+  --color-secondary-m: rgba(123, 185, 8, 0.5);
+  --color-tertiary: rgb(38, 52, 65);
+  --color-tertiary-m: hsla(183, 34%, 38%, 0.65);
+  --color-quaternary: hsl(220, 10%, 28%);
+  --color-quaternary-m: hsla(220, 10%, 28%, 0.65);
+  --color-quinary: white;
+  --color-quinary-m: rgba(255, 255, 255, 0.5);
+}
+// font-weights
+$font-weights: (
+  "font-weight-light": 300,
+  "font-weight-regular": 400,
+  "font-weight-medium": 500,
+  "font-weight-bold": 700,
+);
+@function font-weight($font-weight-style) {
+  @return map-get($font-weights, $font-weight-style);
+}
+//font-sizes
+$font-sizes: (
+  "font-size-small": 1.2rem,
+  "font-size-regular": 1.5rem,
+  "font-size-medium": 1.7rem,
+  "font-size-extra-medium": 2rem,
+  "font-size-large": 2.5rem,
+  "font-size-larger": 3.5rem,
+  "font-size-largest": 6rem,
+);
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
+$break-points: (
+  "break-point-small": 400px,
+  "break-point-smaller": 600px,
+  "break-point-tablet": 900px,
+  "break-point-tabLand": 1100px,
+  "break-point-desktop": 1300px,
+);
+@function break-point($break-point-style) {
+  @return map-get($break-points, $break-point-style);
+}
