@@ -5,7 +5,7 @@ html {
   --color-secondary: hsl(274, 99%, 72%);
   --color-secondary-m: hsl(274, 99%, 72%, 0.6);
   --color-tertiary: hsl(185, 36%, 47%);
-  --color-tertiary-m: rgba(38, 52, 65, 0.836);
+  --color-tertiary-m: rgba(38, 52, 65, 0.719);
   --color-quaternary: rgb(255, 235, 153);
   --color-quaternary-m: rgba(192, 162, 43, 0.65);
   --color-quinary: white;
@@ -51,6 +51,7 @@ $font-sizes: (
 $break-points: (
   "break-point-small": 400px,
   "break-point-smaller": 600px,
+  "break-point-tabport": 700px,
   "break-point-tablet": 900px,
   "break-point-tabLand": 1100px,
   "break-point-desktop": 1300px,

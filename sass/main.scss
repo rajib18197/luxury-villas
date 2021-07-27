@@ -8,6 +8,11 @@
     @content;
   }
 }
+@mixin media-tabport {
+  @media only screen and (max-width: break-point(break-point-tabport)) {
+    @content;
+  }
+}
 @mixin media-smaller {
   @media only screen and (max-width: break-point(break-point-smaller)) {
     @content;

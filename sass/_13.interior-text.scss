@@ -1,5 +1,36 @@
 .interior-text {
-  background-color: var(--color-tertiary);
+  margin: 5rem 0;
+  background-color: var(--color-secondary);
   grid-column: center-start/ col-end 1;
-  height: 40rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+.interior__content {
+  transform: rotate(-0.25turn); //-90deg [1turn=360deg]
+
+  &--title {
+    font-size: 3.3rem;
+    letter-spacing: 0.5rem;
+    color: var(--color-quinary);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+@include media-tablet {
+  .interior-text {
+    grid-column: container-start/ container-end;
+    margin: 0;
+  }
+  .interior__content {
+    transform: rotate(0);
+    padding: 2rem 4rem;
+  }
+}
+@include media-smaller {
+  .interior-text {
+    margin: 4rem 0;
+  }
 }

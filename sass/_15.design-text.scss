@@ -1,5 +1,37 @@
 .design-text {
-  background-color: var(--color-quaternary);
+  margin: 5rem 0;
+  background-color: var(--color-tertiary);
   grid-column: col-start 8 / center-end;
-  height: 40rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+.design__content {
+  transform: rotate(0.25turn);
+
+  &--title {
+    font-size: 3.4rem;
+    letter-spacing: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-quinary);
+  }
+}
+@include media-tabLand {
+  .design__content {
+    &--title {
+      font-size: 3rem;
+      // letter-spacing: 0.6rem;
+    }
+  }
+}
+@include media-tablet {
+  .design-text {
+    grid-column: container-start/container-end;
+  }
+  .design__content {
+    transform: rotate(0);
+    padding: 2rem 4rem;
+  }
 }

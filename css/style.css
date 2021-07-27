@@ -11,7 +11,7 @@ html {
   --color-secondary: hsl(274, 99%, 72%);
   --color-secondary-m: hsl(274, 99%, 72%, 0.6);
   --color-tertiary: hsl(185, 36%, 47%);
-  --color-tertiary-m: rgba(38, 52, 65, 0.836);
+  --color-tertiary-m: rgba(38, 52, 65, 0.719);
   --color-quaternary: rgb(255, 235, 153);
   --color-quaternary-m: rgba(192, 162, 43, 0.65);
   --color-quinary: white;
@@ -41,7 +41,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: [container-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-columns: [container-start] 1fr minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) 1fr [container-end];
   grid-template-rows: max-content 85vh repeat(9, min-content); }
 
 li {
@@ -56,7 +56,9 @@ a:visited {
   font-size: 1.7rem; }
 
 .header {
-  grid-column: container-start/container-end; }
+  grid-column: container-start/container-end;
+  /*-------------------------------- Hamburger Functionality start------------------------------------*/
+  /*-------------------------------- Hamburger Functionality End------------------------------------*/ }
   .header.open .header__menu--line {
     background-color: transparent; }
   .header.open .header__menu--line::before {
@@ -242,9 +244,8 @@ a:visited {
 
 .showcase {
   grid-column: container-start/container-end;
-  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url(../img/house11.jpg);
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url(../img/house-3.jpeg);
   display: flex;
-  justify-content: center;
   align-items: flex-end; }
   .showcase__content {
     display: flex;
@@ -255,12 +256,14 @@ a:visited {
     font-weight: 700;
     color: var(--color-primary);
     text-transform: uppercase;
+    margin-bottom: 0.9rem;
     text-shadow: 3px 0px 10px rgba(var(--color-deep), 0.4), -3px 0px 10px rgba(var(--color-quinary), 0.4);
     animation: moveInTop 1s ease-in-out; }
   .showcase__title {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 700;
-    letter-spacing: 1.4rem;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 1.2rem;
     text-shadow: 3px 0px 10px rgba(var(--color-deep), 0.4), -3px 0px 10px rgba(var(--color-quinary), 0.4);
     background-image: linear-gradient(135deg, var(--color-secondary), var(--color-quinary));
     -webkit-background-clip: text;
@@ -270,7 +273,7 @@ a:visited {
     text-transform: uppercase;
     animation: moveInTop 1s ease-in-out; }
   .showcase__paragraph {
-    font-size: 2.24rem;
+    font-size: 2rem;
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: 0.2rem;
@@ -316,25 +319,6 @@ a:visited {
       color: var(--color-secondary); }
     .showcase__links--1:hover:last-child, .showcase__links--1:active:last-child, .showcase__links--2:hover:last-child, .showcase__links--2:active:last-child {
       color: var(--color-tertiary); }
-
-@keyframes moveInTop {
-  0% {
-    transform: translateY(-5rem);
-    opacity: 0; }
-  70% {
-    transform: translateY(2rem);
-    opacity: 1; }
-  100% {
-    transform: translateY(0);
-    opacity: 1; } }
-
-@keyframes moveInBottom {
-  0% {
-    transform: translateY(2rem);
-    opacity: 0; }
-  100% {
-    transform: translateY(0);
-    opacity: 1; } }
   @media only screen and (max-width: 1100px) {
     .showcase__title {
       font-size: 3.2rem;
@@ -343,7 +327,7 @@ a:visited {
       font-size: 2rem; } }
   @media only screen and (max-width: 900px) {
     .showcase {
-      padding: 4rem; }
+      padding: 2rem; }
       .showcase__title {
         letter-spacing: 0.2rem; }
       .showcase__paragraph {
@@ -369,7 +353,7 @@ a:visited {
       font-size: 1.3rem;
       letter-spacing: 0; }
     .showcase__title {
-      font-size: 2.4rem; }
+      font-size: 2.2rem; }
     .showcase__paragraph {
       font-size: 1.3rem;
       margin-bottom: 2rem; }
@@ -382,19 +366,221 @@ a:visited {
       .showcase__links--1:link, .showcase__links--1:visited {
         margin-bottom: 2rem; } }
 
+@keyframes moveInTop {
+  0% {
+    transform: translateY(-5rem);
+    opacity: 0; }
+  70% {
+    transform: translateY(2rem);
+    opacity: 1; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
 .booking-content {
-  background-color: var(--color-secondary);
   grid-column: center-start/col-end 5;
-  height: 40rem; }
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  row-gap: 5vh;
+  padding: 4vh 6rem 4vh 2rem;
+  margin: 5rem 0; }
+  .booking-content__title {
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative; }
+    .booking-content__title::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 10%;
+      bottom: -0.5rem;
+      width: 20rem;
+      height: 0.3rem;
+      background-color: var(--color-primary); }
+  .booking-content__paragraph {
+    font-size: 1.7rem;
+    letter-spacing: 0.05rem;
+    text-align: justify; }
+  .booking-content__icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .booking-content__icons--weather, .booking-content__icons--time {
+      display: flex;
+      gap: 5rem;
+      align-items: center; }
+      .booking-content__icons--weather i, .booking-content__icons--time i {
+        font-size: 4rem;
+        color: var(--color-primary); }
+      .booking-content__icons--weather p, .booking-content__icons--time p {
+        font-size: 1.5rem;
+        margin-right: auto;
+        font-weight: 400; }
+  @media only screen and (max-width: 900px) {
+    .booking-content {
+      grid-column: container-start/container-end;
+      grid-template-rows: min-content;
+      padding: 4vh 3vw;
+      margin-bottom: 6rem; }
+      .booking-content__title {
+        font-size: 3rem; } }
+  @media only screen and (max-width: 600px) {
+    .booking-content {
+      padding: 4rem 4rem;
+      margin-bottom: 0; }
+      .booking-content__title {
+        font-size: 2rem;
+        letter-spacing: 0.1rem; }
+        .booking-content__title::after {
+          left: 8%;
+          width: 10rem; }
+      .booking-content__paragraph {
+        font-size: 1.5rem; } }
+  @media only screen and (max-width: 400px) {
+    .booking-content {
+      padding: 2rem;
+      grid-template-rows: min-content; } }
 
 .booking-text {
-  background-color: var(--color-primary);
-  grid-column: col-start 6 / center-end; }
+  grid-column: col-start 6 / center-end;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 4vh;
+  padding: 4vh 2vw;
+  margin: 5rem 0; }
+  .booking-text__schedule {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2vw; }
+    .booking-text__schedule--arrival, .booking-text__schedule--departure, .booking-text__schedule--guests {
+      text-align: center; }
+      .booking-text__schedule--arrival h5, .booking-text__schedule--departure h5, .booking-text__schedule--guests h5 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 2rem; }
+      .booking-text__schedule--arrival div, .booking-text__schedule--departure div, .booking-text__schedule--guests div {
+        background-color: var(--color-secondary);
+        padding: 2rem 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        position: relative; }
+        .booking-text__schedule--arrival div::before, .booking-text__schedule--departure div::before, .booking-text__schedule--guests div::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 50%;
+          bottom: 100%;
+          border-color: transparent transparent var(--color-secondary);
+          border-width: 1.5rem;
+          margin-left: -1.5rem;
+          border-style: solid; }
+        .booking-text__schedule--arrival div p, .booking-text__schedule--departure div p, .booking-text__schedule--guests div p {
+          font-size: 2rem; }
+        .booking-text__schedule--arrival div p:nth-of-type(2),
+        .booking-text__schedule--arrival div p:nth-of-type(3), .booking-text__schedule--departure div p:nth-of-type(2),
+        .booking-text__schedule--departure div p:nth-of-type(3), .booking-text__schedule--guests div p:nth-of-type(2),
+        .booking-text__schedule--guests div p:nth-of-type(3) {
+          font-weight: 700; }
+  .booking-text__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.05rem; }
+  .booking-text__link:link, .booking-text__link:visited {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    border: 0.2rem solid var(--color-tertiary);
+    align-self: flex-start;
+    color: var(--color-deep);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 700;
+    position: relative; }
+  .booking-text__link:link::after, .booking-text__link:visited::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    color: var(--color-quinary);
+    transform: scaleX(0);
+    z-index: -1;
+    transition: transform 0.3s cubic-bezier(1, 0, 0, 1); }
+  .booking-text__link:hover::after, .booking-text__link:active::after {
+    transform: scaleX(1); }
+  @media only screen and (max-width: 900px) {
+    .booking-text {
+      grid-column: container-start/container-end;
+      grid-template-rows: min-content;
+      padding: 4vh 3vw; }
+      .booking-text__schedule div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; } }
+  @media only screen and (max-width: 600px) {
+    .booking-text {
+      padding: 4rem 0; }
+      .booking-text__schedule {
+        grid-template-columns: min-content;
+        justify-content: center; }
+        .booking-text__schedule div {
+          padding: 2rem 6rem;
+          flex-direction: column; }
+      .booking-text__contact {
+        padding: 4rem; } }
+  @media only screen and (max-width: 400px) {
+    .booking-text {
+      padding: 2rem 0; }
+      .booking-text__schedule div {
+        flex-direction: column;
+        padding: 2rem 4rem; }
+      .booking-text__link:link, .booking-text__link:visited {
+        padding: 1.5rem 2rem;
+        margin-bottom: 3rem;
+        font-size: 1.4rem; } }
 
 .features {
-  background-color: var(--color-quaternary);
   grid-column: center-start/center-end;
-  height: 600px; }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 6rem;
+  padding: 0 2rem;
+  margin: 10rem 0; }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2.5rem; }
+  .feature__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: var(--color-primary);
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem); }
+  .feature__paragraph {
+    font-size: 1.6rem; }
+
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700; }
 
 .home-motto {
   background-color: var(--color-primary);
@@ -407,29 +593,368 @@ a:visited {
   height: 40rem; }
 
 .homes {
-  background-color: var(--color-quaternary);
+  margin: 10rem 0;
   grid-column: center-start/center-end;
-  height: 40rem; }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 10rem; }
+  .homes .home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem; }
+    .homes .home__img {
+      width: 100%;
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      z-index: 2; }
+    .homes .home__title {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      z-index: 4;
+      width: 80%;
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      background-color: var(--color-secondary);
+      text-align: center;
+      align-self: end;
+      justify-self: center;
+      transform: translateY(50%); }
+    .homes .home__heart {
+      grid-column: 2/-1;
+      grid-row: 1/2;
+      justify-self: end;
+      margin: 2rem;
+      fill: #2cf504;
+      height: 2.5rem;
+      width: 2.5rem;
+      z-index: 3; }
+    .homes .home__location, .homes .home__room {
+      margin-top: 2rem; }
+    .homes .home__location, .homes .home__room, .homes .home__area, .homes .home__price {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center; }
+      .homes .home__location svg, .homes .home__room svg, .homes .home__area svg, .homes .home__price svg {
+        fill: orange;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 2rem; }
+    .homes .home__btn {
+      grid-column: 1/-1; }
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: var(--color-primary);
+  padding: 1.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out; }
+
+.btn:hover {
+  color: var(--color-quinary); }
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--color-tertiary);
+  height: 0;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+  z-index: -1; }
+
+.btn:nth-child(n)::before {
+  transform: translate(-50%, -50%) rotate(45deg); }
+
+.btn:hover::before {
+  height: 600%; }
 
 .interior-content {
-  background-color: var(--color-primary);
-  grid-column: col-start 2 / container-end;
-  height: 40rem; }
+  margin: 5rem 0;
+  grid-column: col-start 2 / container-end; }
+
+.interior__images {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 40rem;
+  overflow: hidden; }
+  .interior__images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.image-1:hover,
+.image-2:hover {
+  filter: contrast(1.7) brightness(80%); }
+
+.image-1:hover .interior__about--1 {
+  display: block; }
+
+.image-2:hover .interior__about--2 {
+  display: block; }
+
+.image-1 {
+  border-right: 0.5rem solid var(--color-primary); }
+
+.image-1,
+.image-2 {
+  transition: all 0.6s;
+  overflow: hidden; }
+
+.interior__about--1,
+.interior__about--2 {
+  width: 80%;
+  outline: 2rem solid rgba(162, 7, 7, 0.7);
+  outline-offset: -2rem;
+  position: absolute;
+  display: none;
+  padding: 2rem;
+  color: #fff; }
+  .interior__about--1 h2,
+  .interior__about--2 h2 {
+    background-color: var(--color-primary);
+    background-color: rgba(77, 11, 80, 0.802);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    color: #fff; }
+  .interior__about--1 p,
+  .interior__about--2 p {
+    background-color: rgba(77, 11, 80, 0.802);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: relative;
+    color: #fff; }
+
+.interior__about--1 {
+  top: 50%;
+  left: 0;
+  animation: moveInLeft 2s ease-in-out;
+  animation-fill-mode: forwards; }
+
+.interior__about--2 {
+  bottom: 50%;
+  right: 0;
+  animation: moveInRight 2s ease-in-out;
+  animation-fill-mode: forwards; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-25rem, -15rem); }
+  30% {
+    transform: translate(5rem, -15rem);
+    opacity: 1; }
+  60% {
+    opacity: 1;
+    transform: translate(5rem, -6rem); }
+  100% {
+    opacity: 1;
+    transform: translate(1rem, -6rem); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(25rem, 15rem); }
+  50% {
+    transform: translate(-5rem, 15rem);
+    opacity: 1; }
+  80% {
+    opacity: 1;
+    transform: translate(-5rem, 6rem); }
+  100% {
+    opacity: 1;
+    transform: translate(-1rem, 6rem); } }
+
+@media only screen and (max-width: 1100px) {
+  .interior__about--1,
+  .interior__about--2 {
+    width: 85%; }
+    .interior__about--1 p,
+    .interior__about--2 p {
+      font-size: 1.5rem;
+      padding: 2rem; } }
+
+@media only screen and (max-width: 900px) {
+  .interior-content {
+    grid-column: container-start / container-end;
+    margin: 0; }
+  .interior__images {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)); }
+  .image-1 {
+    border-right: 0; }
+  .interior__about--1,
+  .interior__about--2 {
+    width: 90%; }
+    .interior__about--1 p,
+    .interior__about--2 p {
+      font-size: 1.4rem;
+      padding: 1rem; } }
+
+@media only screen and (max-width: 700px) {
+  .interior__images img {
+    height: auto; }
+  .interior__about--1,
+  .interior__about--2 {
+    width: 60%; }
+    .interior__about--1 p,
+    .interior__about--2 p {
+      font-size: 1.6rem;
+      padding: 1.5rem; } }
+
+@media only screen and (max-width: 600px) {
+  .interior__about--1 {
+    display: block;
+    top: 5%;
+    left: 0;
+    animation: none; }
+  .interior__about--2 {
+    display: block;
+    bottom: 5%;
+    right: 0;
+    animation: none; }
+  .interior__about--1,
+  .interior__about--2 {
+    width: 90%; }
+    .interior__about--1 p,
+    .interior__about--2 p {
+      font-size: 1.3rem; } }
 
 .interior-text {
-  background-color: var(--color-tertiary);
+  margin: 5rem 0;
+  background-color: var(--color-secondary);
   grid-column: center-start/ col-end 1;
-  height: 40rem; }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center; }
+
+.interior__content {
+  transform: rotate(-0.25turn); }
+  .interior__content--title {
+    font-size: 3.3rem;
+    letter-spacing: 0.5rem;
+    color: var(--color-quinary);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center; }
+
+@media only screen and (max-width: 900px) {
+  .interior-text {
+    grid-column: container-start/ container-end;
+    margin: 0; }
+  .interior__content {
+    transform: rotate(0);
+    padding: 2rem 4rem; } }
+
+@media only screen and (max-width: 600px) {
+  .interior-text {
+    margin: 4rem 0; } }
 
 .design-content {
-  background-color: var(--color-secondary);
+  margin: 5rem 0;
   grid-column: container-start/col-end 7;
-  height: 40rem; }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.design {
+  background-color: rgba(2, 2, 2, 0.733);
+  color: var(--color-quinary);
+  padding: 1rem; }
+  .design__img {
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(5rem); }
+  .design__title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.7rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    color: #daa520; }
+    .design__title span {
+      display: block; }
+  .design__paragraph {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.4rem;
+    text-align: justify;
+    margin-bottom: 2rem; }
+
+.design-gallery {
+  background-image: url(../img/house-3.jpeg);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center; }
+  .design-gallery--1 {
+    width: 100%;
+    grid-row: 2/6;
+    grid-column: 2/6; }
+  .design-gallery--2 {
+    width: 110%;
+    grid-row: 3/7;
+    grid-column: 4/7;
+    z-index: 20; }
+
+@media only screen and (max-width: 1100px) {
+  .design__title {
+    font-size: 3.3rem; } }
+
+@media only screen and (max-width: 900px) {
+  .design-content {
+    grid-column: container-start / container-end;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    row-gap: 4vh; }
+  .design__img {
+    transform: translateX(0); } }
+
+@media only screen and (max-width: 700px) {
+  .design {
+    padding: 2rem; }
+    .design__title {
+      margin-bottom: 2rem; }
+  .design-gallery--2 {
+    grid-column: 4/6; } }
 
 .design-text {
-  background-color: var(--color-quaternary);
+  margin: 5rem 0;
+  background-color: var(--color-tertiary);
   grid-column: col-start 8 / center-end;
-  height: 40rem; }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center; }
+
+.design__content {
+  transform: rotate(0.25turn); }
+  .design__content--title {
+    font-size: 3.4rem;
+    letter-spacing: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-quinary); }
+
+@media only screen and (max-width: 1100px) {
+  .design__content--title {
+    font-size: 3rem; } }
+
+@media only screen and (max-width: 900px) {
+  .design-text {
+    grid-column: container-start/container-end; }
+  .design__content {
+    transform: rotate(0);
+    padding: 2rem 4rem; } }
 
 .gallery {
   background-color: var(--color-primary);
@@ -446,7 +971,7 @@ a:visited {
   grid-column: container-start/container-end;
   height: 40rem; }
 
-.showcase {
+.showcase, .design-gallery {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }

@@ -1,5 +1,83 @@
 .design-content {
-  background-color: var(--color-secondary);
+  margin: 5rem 0;
   grid-column: container-start/col-end 7;
-  height: 40rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.design {
+  background-color: rgba(2, 2, 2, 0.733);
+  color: var(--color-quinary);
+  padding: 1rem;
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(5rem);
+  }
+  &__title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.7rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    color: #daa520;
+    span {
+      display: block;
+    }
+  }
+  &__paragraph {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.4rem;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+}
+.design-gallery {
+  background-image: url(../img/house-3.jpeg);
+  @extend %bg;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  &--1 {
+    width: 100%;
+    grid-row: 2/6;
+    grid-column: 2/6;
+  }
+  &--2 {
+    width: 110%;
+    grid-row: 3/7;
+    grid-column: 4/7;
+    z-index: 20;
+  }
+}
+@include media-tabLand {
+  .design {
+    &__title {
+      font-size: 3.3rem;
+    }
+  }
+}
+@include media-tablet {
+  .design-content {
+    grid-column: container-start / container-end;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    row-gap: 4vh;
+  }
+  .design {
+    &__img {
+      transform: translateX(0);
+    }
+  }
+}
+@include media-tabport {
+  .design {
+    padding: 2rem;
+    &__title {
+      margin-bottom: 2rem;
+    }
+  }
+  .design-gallery {
+    &--2 {
+      grid-column: 4/6;
+    }
+  }
 }
