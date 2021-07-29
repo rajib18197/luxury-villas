@@ -21,6 +21,8 @@
       width: 80%;
       font-size: 1.5rem;
       padding: 1rem 2rem;
+      outline: 0.2rem solid var(--color-quinary);
+      outline-offset: 0.3rem;
       background-color: var(--color-secondary);
       text-align: center;
       align-self: end;
@@ -62,17 +64,21 @@
   }
 }
 .btn {
-  font-size: 1.6rem;
-  font-weight: 700;
-  background-color: var(--color-primary);
-  padding: 1.8rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  &,
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: var(--color-primary);
+    padding: 1.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
 }
 .btn:hover {
   color: var(--color-quinary);

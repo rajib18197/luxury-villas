@@ -23,6 +23,7 @@
   .interior-text {
     grid-column: container-start/ container-end;
     margin: 0;
+    row-gap: 4vh;
   }
   .interior__content {
     transform: rotate(0);
@@ -31,6 +32,6 @@
 }
 @include media-smaller {
   .interior-text {
-    margin: 4rem 0;
+    // margin: 4rem 0;
   }
 }

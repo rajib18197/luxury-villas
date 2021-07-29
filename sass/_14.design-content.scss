@@ -58,6 +58,7 @@
 }
 @include media-tablet {
   .design-content {
+    margin: 0;
     grid-column: container-start / container-end;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     row-gap: 4vh;
@@ -76,8 +77,14 @@
     }
   }
   .design-gallery {
+    padding: 6rem;
+    &--1 {
+      grid-column: 1/6;
+      grid-row: 1/-1;
+    }
     &--2 {
-      grid-column: 4/6;
+      grid-column: 4/7;
+      grid-row: 1/-1;
     }
   }
 }

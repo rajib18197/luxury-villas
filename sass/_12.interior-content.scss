@@ -6,7 +6,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 40rem;
+  grid-template-rows: 50rem;
   overflow: hidden;
   img {
     width: 100%;
@@ -29,7 +29,6 @@
 }
 .image-1,
 .image-2 {
-  // z-index: 80;
   transition: all 0.6s;
   overflow: hidden;
 }
@@ -87,11 +86,11 @@
   }
   60% {
     opacity: 1;
-    transform: translate(5rem, -6rem);
+    transform: translate(5rem, -1rem);
   }
   100% {
     opacity: 1;
-    transform: translate(1rem, -6rem);
+    transform: translate(1rem, -1rem);
   }
 }
 @keyframes moveInRight {
@@ -105,13 +104,14 @@
   }
   80% {
     opacity: 1;
-    transform: translate(-5rem, 6rem);
+    transform: translate(-5rem, 1rem);
   }
   100% {
     opacity: 1;
-    transform: translate(-1rem, 6rem);
+    transform: translate(-1rem, 1rem);
   }
 }
+//responsive
 @include media-tabLand {
   .interior__about--1,
   .interior__about--2 {
@@ -145,14 +145,8 @@
   }
 }
 @include media-tabport {
-  .interior__images {
-    img {
-      height: auto;
-    }
-  }
   .interior__about--1,
   .interior__about--2 {
-    width: 60%;
     p {
       font-size: 1.6rem;
       padding: 1.5rem;
