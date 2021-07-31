@@ -1,0 +1,90 @@
+.design-content {
+  margin: 5rem 0;
+  grid-column: container-start/col-end 7;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.design {
+  background-color: $color-grey-dark-3;
+  color: $color-light;
+  padding: 1rem;
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(5rem);
+  }
+  &__title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.7rem;
+    line-height: 1.2;
+    color: #daa520;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    span {
+      display: block;
+    }
+  }
+  &__paragraph {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+}
+.design-gallery {
+  background-image: url(../img/design3.jpg);
+  @extend %bg;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  &--1 {
+    width: 100%;
+    grid-row: 2/6;
+    grid-column: 2/6;
+  }
+  &--2 {
+    width: 110%;
+    grid-row: 3/7;
+    grid-column: 4/7;
+    z-index: 10;
+  }
+}
+@include media-tabLand {
+  .design {
+    &__title {
+      font-size: 3.3rem;
+    }
+  }
+}
+@include media-tablet {
+  .design-content {
+    margin: 0;
+    grid-column: container-start / container-end;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    row-gap: 4vh;
+  }
+  .design {
+    &__img {
+      transform: translateX(0);
+    }
+  }
+}
+@include media-tabport {
+  .design {
+    padding: 2rem;
+    &__title {
+      margin-bottom: 2rem;
+    }
+  }
+  .design-gallery {
+    padding: 6rem;
+    &--1 {
+      grid-column: 1/6;
+      grid-row: 1/-1;
+    }
+    &--2 {
+      grid-column: 4/7;
+      grid-row: 1/-1;
+    }
+  }
+}

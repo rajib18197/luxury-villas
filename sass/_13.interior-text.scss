@@ -1,6 +1,6 @@
 .interior-text {
   margin: 5rem 0;
-  background-color: var(--color-secondary);
+  background-color: $color-secondary-dark;
   grid-column: center-start/ col-end 1;
   display: grid;
   grid-template-columns: 1fr;
@@ -11,10 +11,10 @@
   transform: rotate(-0.25turn); //-90deg [1turn=360deg]
 
   &--title {
-    font-size: 3.3rem;
-    letter-spacing: 0.5rem;
-    color: var(--color-quinary);
-    font-weight: 700;
+    font-size: 4rem;
+    letter-spacing: 0.4rem;
+    color: $color-light;
+    font-weight: 500;
     text-transform: uppercase;
     text-align: center;
   }

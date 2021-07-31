@@ -4,32 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Family  -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Work+Sans:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,600;1,300&family=Open+Sans:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/1b3e8e88ed.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Favicon  -->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <!-- StyleSheet -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Title  -->
     <title>Vision Luxury Website</title>
   </head>
 
   <body class="container">
+    <!-------------------------- Header Navigation Section  ---------------------------->
     <header class="header">
-      <!-- Hamburger Menu For Mobile, Tablet Devices  -->
+      <!-- Hamburger Menu For Mobile, Tablet Devices Start  -->
       <div class="header__menu">
         <div class="header__menu--line"></div>
       </div>
       <!-- Background Overlay -->
       <div class="header__overlay"></div>
-      <!-- DesKtop Navigation -->
+      <!-- Hamburger Menu For Mobile, Tablet Devices End  -->
+
+      <!------------------------- DesKtop Navigation----------------------- -->
       <nav class="header__navigation">
         <a href="#" class="header__navigation--logo">
           <img src="img/favicon.png" alt="" class="header__navigation--img" />
@@ -52,17 +51,17 @@
           </li>
           <li class="header__navigation--list">
             <a href="#" class="header__navigation--link" data-text="Events"
-              >Events</a
+              >Design</a
             >
           </li>
           <li class="header__navigation--list">
             <a href="#" class="header__navigation--link" data-text="Program"
-              >Program</a
+              >Gallery</a
             >
           </li>
           <li class="header__navigation--list">
             <a href="#" class="header__navigation--link" data-text="Health"
-              >Health</a
+              >Contact</a
             >
           </li>
           <!-- Dark Mode -->
@@ -72,20 +71,22 @@
         </ul>
       </nav>
     </header>
+    <!-- ----------------------- Showcase Section / Hero Section -------------------------- -->
     <section class="showcase">
       <div class="showcase__content">
-        <h3 class="heading-3">Relax Your Soul</h3>
-        <h1 class="showcase__title">The Ultimate Personal Freedom</h1>
+        <h3 class="heading-3">Your Own Home</h3>
+        <h1 class="showcase__title">The ultimate personal freedom</h1>
         <p class="showcase__paragraph">
-          The Team of VLV welcomes You.Start relaxing Your soul and enjoy your
+          The Team of VLV welcomes You. Start relaxing Your soul and enjoy your
           stay.
         </p>
         <div class="showcase__links">
           <a href="#" class="showcase__links--1">View Our Properties</a>
-          <a href="#" class="showcase__links--2">Book Now</a>
+          <a href="#" class="showcase__links--2">Join Now</a>
         </div>
       </div>
     </section>
+    <!------------------------- Booking Content Serenity ------------------------->
     <section class="booking-content">
       <h2 class="booking-content__title">Discover Serenity</h2>
       <p class="booking-content__paragraph">
@@ -97,15 +98,20 @@
       </p>
       <div class="booking-content__icons">
         <div class="booking-content__icons--weather">
-          <i class="far fa-sun"></i>
+          <svg class="icon-weather">
+            <use xlink:href="img/sprite.svg#icon-sun-o"></use>
+          </svg>
           <p>24<sup>&#8451;</sup></p>
         </div>
         <div class="booking-content__icons--time">
-          <i class="far fa-clock"></i>
+          <svg class="icon-time">
+            <use xlink:href="img/sprite.svg#icon-clock"></use>
+          </svg>
           <p>10:00 AM</p>
         </div>
       </div>
     </section>
+    <!------------------------- Booking Text Section  ------------------------->
     <section class="booking-text">
       <div class="booking-text__schedule">
         <div class="booking-text__schedule--arrival">
@@ -140,29 +146,29 @@
         <p>Reservation assistant available 24 hours</p>
       </div>
     </section>
-
+    <!------------------------- Design Content Section ------------------------->
     <section class="design-content">
       <div class="design-gallery">
-        <img src="img/house1.jpg" alt="" class="design-gallery--1" />
-        <img src="img/house-3.jpeg" alt="" class="design-gallery--2" />
+        <img src="img/design1.jpg" alt="" class="design-gallery--1" />
+        <img src="img/design2.jpg" alt="" class="design-gallery--2" />
       </div>
       <div class="design">
-        <h2 class="design__title">The Golden <span>center Apartment</span></h2>
+        <h2 class="design__title">The Golden <span>Center Apartment</span></h2>
         <p class="design__paragraph">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
           maiores similique assumenda deleniti! Impedit doloribus adipisci.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
-          maiores similique assumenda deleniti! Impedit doloribus adipisci.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
-        <img src="img/house-5.jpeg" alt="" class="design__img" />
+        <img src="img/design4.jpg" alt="" class="design__img" />
       </div>
     </section>
+    <!------------------------- Design Text Section ------------------------>
     <section class="design-text">
       <div class="design__content">
         <h2 class="design__content--title">Design</h2>
       </div>
     </section>
-
+    <!------------------------- Features Section ------------------------->
     <section class="features">
       <!-- Feature-1 -->
       <div class="feature">
@@ -171,10 +177,8 @@
         </svg>
         <h4 class="heading-4">World's Best Luxurious Home</h4>
         <p class="feature__paragraph">
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, -->
-          <!-- officia unde. Nihil dolor et eos natus. Lorem ipsum dolor sit. -->
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          officia unde. Nihil dolor et eos natus. Lorem ipsum dolor sit.
+          officia unde. Nihil dolor et eos Lorem ipsum.
         </p>
       </div>
       <!-- Feature-2 -->
@@ -184,10 +188,8 @@
         </svg>
         <h4 class="heading-4">Only the best properties</h4>
         <p class="feature__paragraph">
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, -->
-          <!-- officia unde. Lorem ipsum dolor sit. -->
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          officia unde. Nihil dolor et eos natus. Lorem ipsum dolor sit.
+          officia unde. Lorem ipsum dolor sit.
         </p>
       </div>
       <!-- Feature-3 -->
@@ -198,10 +200,8 @@
         </svg>
         <h4 class="heading-4">All homes in one location</h4>
         <p class="feature__paragraph">
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, -->
-          <!-- officia unde Nihil. -->
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          officia unde. Nihil dolor et eos natus. Lorem ipsum dolor sit.
+          officia unde Nihil.
         </p>
       </div>
       <!-- Feature-4 -->
@@ -212,10 +212,8 @@
         </svg>
         <h4 class="heading-4">New home in one week</h4>
         <p class="feature__paragraph">
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, -->
-          <!-- officia unde. Nihil dolor et eos natus. Lorem ipsum. -->
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          officia unde. Nihil dolor et eos natus. Lorem ipsum dolor sit.
+          officia unde. Nihil dolor et eos natus. Lorem ipsum.
         </p>
       </div>
       <!-- Feature-5 -->
@@ -226,8 +224,6 @@
         </svg>
         <h4 class="heading-4">Top 1% realtors</h4>
         <p class="feature__paragraph">
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, -->
-          <!-- officia unde. Nihil dolor et eos natus. Lorem ipsum dolor sit. -->
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
           officia unde. Nihil dolor et eos natus. Lorem ipsum dolor sit.
         </p>
@@ -240,22 +236,23 @@
         </svg>
         <h4 class="heading-4">Secure payment for nexter</h4>
         <p class="feature__paragraph">
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, -->
-          <!-- officia unde. -->
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          officia unde. Nihil dolor et eos natus. Lorem ipsum dolor sit.
+          officia unde.
         </p>
       </div>
     </section>
+    <!------------------------- Interior Text Section ------------------------->
     <section class="interior-text">
       <div class="interior__content">
         <h2 class="interior__content--title">Interior</h2>
       </div>
     </section>
+    <!------------------------- Interior Content ------------------------->
     <section class="interior-content">
       <div class="interior__images">
+        <!-- Image-01  -->
         <div class="image-1">
-          <img src="img/house-3.jpeg" alt="" class="img-1" />
+          <img src="img/interior1.jpg" alt="" class="img-1" />
           <div class="interior__about interior__about--1">
             <h2>Beautifull Interior</h2>
             <p>
@@ -264,9 +261,9 @@
             </p>
           </div>
         </div>
-        <!-- image-2 -->
+        <!-- image-02 -->
         <div class="image-2">
-          <img src="img/house-5.jpeg" alt="" class="img-2" />
+          <img src="img/interior2.jpg" alt="" class="img-2" />
           <div class="interior__about interior__about--2">
             <h2>Beautifull Interior</h2>
             <p>
@@ -277,35 +274,36 @@
         </div>
       </div>
     </section>
+    <!------------------------- Home Section ------------------------->
     <section class="homes">
       <!-- Home-1 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home1.jpg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
         <h2 class="home__title">Beautifull Family House</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>Italy</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>5 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>325m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$1.2 Million</p>
         </div>
@@ -313,32 +311,32 @@
       </div>
       <!-- Home-2 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home2.jpg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
-        <h2 class="home__title">Beautifull Family House</h2>
+        <h2 class="home__title">Modern Glass Villa</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>Canada</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>6 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>450m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$2.7 Million</p>
         </div>
@@ -346,32 +344,32 @@
       </div>
       <!-- Home-3 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home3.jpg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
-        <h2 class="home__title">Beautifull Family House</h2>
+        <h2 class="home__title">Cozy Country House</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>UK</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>4 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>250m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$4.5 Million</p>
         </div>
@@ -379,32 +377,32 @@
       </div>
       <!-- Home-4 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home4.jpg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
-        <h2 class="home__title">Beautifull Family House</h2>
+        <h2 class="home__title">Large Rustical Villa</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>Portugal</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>6 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>480m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$1.9 Million</p>
         </div>
@@ -412,32 +410,32 @@
       </div>
       <!-- Home-5 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home5.jpg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
-        <h2 class="home__title">Beautifull Family House</h2>
+        <h2 class="home__title">Majestic Palace House</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>Germany</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>18 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>4230m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$9.5 Million</p>
         </div>
@@ -445,32 +443,32 @@
       </div>
       <!-- Home-6 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home6.jpg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
-        <h2 class="home__title">Beautifull Family House</h2>
+        <h2 class="home__title">Modern Family Apartment</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>Switzerland</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>3 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>180m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$0.5 Million</p>
         </div>
@@ -478,32 +476,32 @@
       </div>
       <!-- Home-7 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home7.jpg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
         <h2 class="home__title">Beautifull Family House</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>Italy</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>5 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>325m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$5 Million</p>
         </div>
@@ -511,32 +509,32 @@
       </div>
       <!-- Home-8 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home8.jpg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
         <h2 class="home__title">Beautifull Family House</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>Belgium</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>10 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>400m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$3.5 Million</p>
         </div>
@@ -544,46 +542,50 @@
       </div>
       <!-- Home-9 -->
       <div class="home">
-        <img src="img/house11.jpg" alt="" class="home__img" />
+        <img src="img/home9.jpeg" alt="" class="home__img" />
         <svg class="home__heart">
-          <use xlink:href="img/sprite.svg#icon-global"></use>
+          <use xlink:href="img/sprite.svg#icon-heart"></use>
         </svg>
         <h2 class="home__title">Beautifull Family House</h2>
         <div class="home__location">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
           </svg>
           <p>Finland</p>
         </div>
         <div class="home__room">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-user"></use>
           </svg>
           <p>4 Rooms</p>
         </div>
         <div class="home__area">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
           </svg>
           <p>250m<sup>2</sup></p>
         </div>
         <div class="home__price">
           <svg>
-            <use xlink:href="img/sprite.svg#icon-global"></use>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
           </svg>
           <p>$1.2 Million</p>
         </div>
         <button class="btn home__btn">Contact Realtors</button>
       </div>
     </section>
+    <!------------------------- Home Motto Section ------------------------->
     <section class="home-motto">
       <div class="motto">
         <h2 class="heading-2">We believe in Luxury</h2>
         <p class="paragraph">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
           unde quo voluptatibus adipisci perferendis doloremque iure facere
-          voluptatem distinctio. Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit Voluptate.
+          voluptatem distinctio Lorem ipsum.
+        </p>
+        <p class="paragraph">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum tenetur,
+          eius aliquid mollitia exercitationem pariatur quaerat veritatis.
         </p>
         <a href="#" class="motto__btn">
           <span>View Our Properties</span>
@@ -598,107 +600,169 @@
         </div>
       </div>
     </section>
+    <!------------------------- Realtors Section ------------------------->
     <section class="home-realtors">
       <h4 class="heading-4 home-realtors--heading">Top 3 Realtors</h4>
       <div class="realtors">
         <div class="realtors__list">
-          <img src="img/male-photo3.jpg" alt="" / class="realtors__img">
+          <img src="img/male-photo1.jpg" alt="" / class="realtors__img">
           <div class="realtors__details">
             <h3 class="realtors__name">Mike Santer</h3>
             <p class="realtors__sold">245 Houses Sold</p>
           </div>
         </div>
         <div class="realtors__list">
-          <img src="img/male-photo3.jpg" alt="" / class="realtors__img">
+          <img src="img/male-photo1.jpg" alt="" / class="realtors__img">
           <div class="realtors__details">
-            <h3 class="realtors__name">Mike Santer</h3>
-            <p class="realtors__sold">245 Houses Sold</p>
+            <h3 class="realtors__name">Peter Nanes</h3>
+            <p class="realtors__sold">212 Houses Sold</p>
           </div>
         </div>
         <div class="realtors__list">
-          <img src="img/male-photo3.jpg" alt="" / class="realtors__img">
+          <img src="img/male-photo1.jpg" alt="" / class="realtors__img">
           <div class="realtors__details">
-            <h3 class="realtors__name">Mike Santer</h3>
-            <p class="realtors__sold">245 Houses Sold</p>
+            <h3 class="realtors__name">Andrew cohelho</h3>
+            <p class="realtors__sold">190 Houses Sold</p>
           </div>
         </div>
       </div>
     </section>
+    <!------------------------- Gallery Section ------------------------->
     <section class="gallery">
+      <!-- 14 Home Picture  -->
+      <!-- Gallery -01  -->
       <figure class="gallery__list gallery__list--1">
-        <img src="img/house11.jpg" alt="gallery Image 1" class="gallery__img" />
+        <img
+          src="img/gallery-1.jpg"
+          alt="gallery Image 1"
+          class="gallery__img"
+        />
       </figure>
+      <!-- Gallery -02  -->
       <figure class="gallery__list gallery__list--2">
         <img
-          src="img/house-3.jpeg"
+          src="img/gallery-2.jpg"
           alt="gallery Image 2"
           class="gallery__img"
         />
       </figure>
+      <!-- Gallery -03  -->
+
       <figure class="gallery__list gallery__list--3">
-        <img src="img/house11.jpg" alt="gallery Image 3" class="gallery__img" />
+        <img
+          src="img/gallery-3.jpg"
+          alt="gallery Image 3"
+          class="gallery__img"
+        />
       </figure>
+      <!-- Gallery -04  -->
+
       <figure class="gallery__list gallery__list--4">
-        <img src="img/house11.jpg" alt="gallery Image 4" class="gallery__img" />
+        <img
+          src="img/gallery-4.jpeg"
+          alt="gallery Image 4"
+          class="gallery__img"
+        />
       </figure>
+      <!-- Gallery -05  -->
+
       <figure class="gallery__list gallery__list--5">
-        <img src="img/house11.jpg" alt="gallery Image 5" class="gallery__img" />
+        <img
+          src="img/gallery-5.jpg"
+          alt="gallery Image 5"
+          class="gallery__img"
+        />
       </figure>
+      <!-- Gallery -06  -->
+
       <figure class="gallery__list gallery__list--6">
-        <img src="img/house11.jpg" alt="gallery Image 6" class="gallery__img" />
+        <img
+          src="img/gallery-6.jpeg"
+          alt="gallery Image 6"
+          class="gallery__img"
+        />
       </figure>
+      <!-- Gallery -07  -->
+
       <figure class="gallery__list gallery__list--7">
-        <img src="img/house11.jpg" alt="gallery Image 7" class="gallery__img" />
+        <img
+          src="img/gallery-7.jpg"
+          alt="gallery Image 7"
+          class="gallery__img"
+        />
       </figure>
+      <!-- Gallery -08  -->
+
       <figure class="gallery__list gallery__list--8">
-        <img src="img/house11.jpg" alt="gallery Image 8" class="gallery__img" />
+        <img
+          src="img/gallery-8.jpg"
+          alt="gallery Image 8"
+          class="gallery__img"
+        />
       </figure>
+      <!-- Gallery -09  -->
+
       <figure class="gallery__list gallery__list--9">
-        <img src="img/house11.jpg" alt="gallery Image 9" class="gallery__img" />
+        <img
+          src="img/gallery-9.jpg"
+          alt="gallery Image 9"
+          class="gallery__img"
+        />
       </figure>
+      <!-- Gallery -10  -->
+
       <figure class="gallery__list gallery__list--10">
         <img
-          src="img/house11.jpg"
+          src="img/gallery-10.jpg"
           alt="gallery Image 10"
           class="gallery__img"
         />
       </figure>
+      <!-- Gallery -11  -->
+
       <figure class="gallery__list gallery__list--11">
         <img
-          src="img/house11.jpg"
+          src="img/gallery-11.jpg"
           alt="gallery Image 11"
           class="gallery__img"
         />
       </figure>
+      <!-- Gallery -12  -->
+
       <figure class="gallery__list gallery__list--12">
         <img
-          src="img/house11.jpg"
+          src="img/gallery-12.jpg"
           alt="gallery Image 12"
           class="gallery__img"
         />
       </figure>
+      <!-- Gallery -13  -->
+
       <figure class="gallery__list gallery__list--13">
         <img
-          src="img/house11.jpg"
+          src="img/gallery-13.jpg"
           alt="gallery Image 13"
           class="gallery__img"
         />
       </figure>
+      <!-- Gallery -14  -->
+
       <figure class="gallery__list gallery__list--14">
         <img
-          src="img/house11.jpg"
+          src="img/gallery-14.jpg"
           alt="gallery Image 14"
           class="gallery__img"
         />
       </figure>
     </section>
+    <!------------------------- Testimonials Sections ------------------------->
     <section class="testimonials">
       <!-- Card-01  -->
       <div class="card">
-        <div class="card__side card__side--forepart">
-          <h2 class="heading-5">Mike Santner</h2>
+        <div class="card__side card__side--forepart card__side--forepart-1">
+          <h2 class="heading-5">Cristiano Ronaldo</h2>
         </div>
-        <div class="card__side card__side--afterwards">
+        <div class="card__side card__side--afterwards card__side--afterwards-1">
           <h4 class="heading-6">Happy Family</h4>
           <h2 class="heading-secondary">
             &ldquo;The Best Decisions Of Our Lives&rdquo;
@@ -714,10 +778,10 @@
       <!-- Card-02  -->
 
       <div class="card">
-        <div class="card__side card__side--forepart">
-          <h2 class="heading-5">Mike Santner</h2>
+        <div class="card__side card__side--forepart card__side--forepart-2">
+          <h2 class="heading-5">Virat Kohli</h2>
         </div>
-        <div class="card__side card__side--afterwards">
+        <div class="card__side card__side--afterwards card__side--afterwards-2">
           <h4 class="heading-6">Happy Family</h4>
 
           <h2 class="heading-secondary">
@@ -734,10 +798,10 @@
       <!-- Card-03  -->
 
       <div class="card">
-        <div class="card__side card__side--forepart">
-          <h2 class="heading-5">Mike Santner</h2>
+        <div class="card__side card__side--forepart card__side--forepart-3">
+          <h2 class="heading-5">Mesut Ozil</h2>
         </div>
-        <div class="card__side card__side--afterwards">
+        <div class="card__side card__side--afterwards card__side--afterwards-3">
           <h4 class="heading-6">Happy Family</h4>
           <h2 class="heading-secondary">
             &ldquo;The Best Decisions Of Our Lives&rdquo;
@@ -753,10 +817,10 @@
       <!-- Card-04  -->
 
       <div class="card">
-        <div class="card__side card__side--forepart">
-          <h2 class="heading-5">Mike Santner</h2>
+        <div class="card__side card__side--forepart card__side--forepart-4">
+          <h2 class="heading-5">Hitesh Choudhary</h2>
         </div>
-        <div class="card__side card__side--afterwards">
+        <div class="card__side card__side--afterwards card__side--afterwards-4">
           <h4 class="heading-6">Happy Family</h4>
           <h2 class="heading-secondary">
             &ldquo;The Best Decisions Of Our Lives&rdquo;
@@ -772,10 +836,10 @@
       <!-- Card-05  -->
 
       <div class="card">
-        <div class="card__side card__side--forepart">
-          <h2 class="heading-5">Mike Santner</h2>
+        <div class="card__side card__side--forepart card__side--forepart-5">
+          <h2 class="heading-5">Simon Derek</h2>
         </div>
-        <div class="card__side card__side--afterwards">
+        <div class="card__side card__side--afterwards card__side--afterwards-5">
           <h4 class="heading-6">Happy Family</h4>
           <h2 class="heading-secondary">
             &ldquo;The Best Decisions Of Our Lives&rdquo;
@@ -791,10 +855,10 @@
       <!-- Card-06  -->
 
       <div class="card">
-        <div class="card__side card__side--forepart">
-          <h2 class="heading-5">Mike Santner</h2>
+        <div class="card__side card__side--forepart card__side--forepart-6">
+          <h2 class="heading-5">Jonas Schemedtmann</h2>
         </div>
-        <div class="card__side card__side--afterwards">
+        <div class="card__side card__side--afterwards card__side--afterwards-6">
           <h4 class="heading-6">Happy Family</h4>
           <h2 class="heading-secondary">
             &ldquo;The Best Decisions Of Our Lives&rdquo;
@@ -808,7 +872,44 @@
         </div>
       </div>
     </section>
-    <section class="footer"></section>
+    <!------------------------- Footer Section ------------------------->
+    <section class="footer">
+      <div class="footer__about">
+        <h4 class="footer__about--heading">Contact Us</h4>
+        <!-- <p class="paragraph-3">
+          Lorem ipsum dolor sit amet consectetur lorem elit. Quibusdam tempora
+          error corrupti animi nemo corporis molestias impedit.
+        </p> -->
+        <div class="footer__address">
+          <svg class="footer__icon">
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+          </svg>
+          <span>Dhaka, Bangladesh </span>
+        </div>
+        <div class="footer__address">
+          <svg class="footer__icon">
+            <use xlink:href="img/sprite.svg#icon-outgoing_mail"></use>
+          </svg>
+          <p class="footer__mail">raju@gmail.com</p>
+        </div>
+        <p class="copyright">All Rights Reserved &copy;</p>
+      </div>
+      <div class="footer__social">
+        <svg class="footer__social--icon">
+          <use xlink:href="img/sprite.svg#icon-facebook"></use>
+        </svg>
+        <svg class="footer__social--icon">
+          <use xlink:href="img/sprite.svg#icon-instagram"></use>
+        </svg>
+        <svg class="footer__social--icon">
+          <use xlink:href="img/sprite.svg#icon-twitter"></use>
+        </svg>
+        <svg class="footer__social--icon">
+          <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+        </svg>
+      </div>
+    </section>
+    <!-- Javascript -->
     <script src="js/navigation.js"></script>
     <script src="js/dark-mode.js"></script>
   </body>

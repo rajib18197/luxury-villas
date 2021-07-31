@@ -1,0 +1,32 @@
+.features {
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 6rem;
+  padding: 0 2rem;
+  margin: 10rem 0;
+}
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2.5rem;
+  &__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: $color-secondary;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+  }
+  &__paragraph {
+    font-size: 1.55rem;
+    // font-family: "Josefin Sans", sans-serif;
+  }
+}
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  // text-transform: capitalize;
+}

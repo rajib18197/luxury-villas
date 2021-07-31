@@ -1,0 +1,196 @@
+.testimonials {
+  margin: 15rem 0;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 35rem);
+  // grid-template-columns: repeat(auto-fit, 35rem);
+  column-gap: 4rem;
+  row-gap: 10rem;
+  place-content: center;
+}
+.card {
+  height: 54rem;
+  position: relative;
+  perspective: 150rem;
+  &__side {
+    height: 54rem;
+    padding: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    // transform: perspective(100rem);
+    transition: all 1s ease-in-out;
+    &--forepart {
+      background-color: orangered;
+      @extend %bg;
+      background-position: top;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      &-1 {
+        background-image: url(../img/person-1.jpg);
+      }
+      &-2 {
+        background-image: url(../img/person-2.jpg);
+      }
+      &-3 {
+        background-image: url(../img/person-3.jpg);
+      }
+      &-4 {
+        background-image: url(../img/person-4.jpg);
+      }
+      &-5 {
+        background-image: url(../img/person-5.jpg);
+      }
+      &-6 {
+        background-image: url(../img/person-6.jpg);
+      }
+    }
+    &--afterwards {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      transform: rotateY(180deg);
+      // transform: perspective(100rem) rotateY(0.5turn);
+      background-color: #54483a;
+      // background-image: linear-gradient(
+      //     to right,
+      //     rgba(16, 29, 38, 0.83),
+      //     rgba(16, 29, 38, 0.83)
+      //   ),
+      //   url(../img/house-3.jpeg);
+      @extend %bg;
+      color: $color-light;
+      a:link,
+      a:visited {
+        font-family: "Josefin Sans", sans-serif;
+        border-color: $color-primary;
+        font-size: 1.5rem;
+        color: inherit;
+      }
+      &-1 {
+        background-image: linear-gradient(
+            to right,
+            rgba(16, 29, 38, 0.7),
+            rgba(16, 29, 38, 0.7)
+          ),
+          url(../img/testimonials-1.jpg);
+      }
+      &-2 {
+        background-image: linear-gradient(
+            to right,
+            rgba(16, 29, 38, 0.7),
+            rgba(16, 29, 38, 0.7)
+          ),
+          url(../img/testimonials-2.jpeg);
+      }
+      &-3 {
+        background-image: linear-gradient(
+            to right,
+            rgba(16, 29, 38, 0.7),
+            rgba(16, 29, 38, 0.7)
+          ),
+          url(../img/testimonials-3.jpg);
+      }
+      &-4 {
+        background-image: linear-gradient(
+            to right,
+            rgba(16, 29, 38, 0.7),
+            rgba(16, 29, 38, 0.7)
+          ),
+          url(../img/testimonials-4.jpg);
+      }
+      &-5 {
+        background-image: linear-gradient(
+            to right,
+            rgba(16, 29, 38, 0.7),
+            rgba(16, 29, 38, 0.7)
+          ),
+          url(../img/testimonials-5.jpg);
+      }
+      &-6 {
+        background-image: linear-gradient(
+            to right,
+            rgba(16, 29, 38, 0.7),
+            rgba(16, 29, 38, 0.7)
+          ),
+          url(../img/testimonials-6.jpeg);
+      }
+    }
+  }
+  &:hover &__side--forepart {
+    transform: rotateY(-180deg);
+    // transform: perspective(100rem) rotateY(-180deg);
+  }
+  &:hover &__side--afterwards {
+    transform: rotateY(0);
+    // transform: perspective(100rem) rotateY(0turn);
+  }
+}
+.heading-5 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  padding: 1rem;
+  background-color: rgba($color-secondary, 0.9);
+  color: $color-light;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.heading-6 {
+  font-family: "Josefin Sans", sans-serif;
+  align-self: flex-start;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.heading-secondary {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+}
+.paragraph--2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+@include media-tablet {
+  .testimonials {
+    row-gap: 20rem;
+    margin: 15rem 0;
+  }
+  .card {
+    height: auto;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    &__side {
+      position: relative;
+      box-shadow: none;
+      border-radius: 0;
+      &--forepart {
+        justify-content: flex-start;
+        height: 50%;
+      }
+      &--afterwards {
+        height: auto;
+        gap: 1rem;
+        justify-content: flex-start;
+        transform: rotateY(0);
+      }
+    }
+    &:hover &__side--forepart {
+      transform: rotateY(0);
+    }
+  }
+} ;

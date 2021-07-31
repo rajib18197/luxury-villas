@@ -1,30 +1,43 @@
-// Light Color Palette (Custom Properties)
-html {
-  --color-primary: hsl(87, 98%, 34%);
-  --color-primary-m: hsla(87, 100%, 45%, 0.55);
-  --color-secondary: hsl(274, 99%, 72%);
-  --color-secondary-m: rgba(193, 113, 254, 0.842);
-  --color-tertiary: hsl(185, 36%, 47%);
-  --color-tertiary-m: rgba(38, 52, 65, 0.719);
-  --color-quaternary: rgb(255, 235, 153);
-  --color-quaternary-m: rgba(192, 162, 43, 0.65);
-  --color-quinary: white;
-  --color-quinary-m: rgba(255, 255, 255, 0.5);
-  --color-deep: #000;
-}
-// Dark Color Palette (Custom Properties)
-html[data-theme="dark"] {
-  --color-primary: rgb(36, 38, 43);
-  --color-primary-m: rgba(36, 38, 43, 0.65);
-  --color-secondary: rgb(124, 185, 8);
-  --color-secondary-m: rgba(123, 185, 8, 0.5);
-  --color-tertiary: rgb(38, 52, 65);
-  --color-tertiary-m: hsla(183, 34%, 38%, 0.65);
-  --color-quaternary: hsl(220, 10%, 28%);
-  --color-quaternary-m: hsla(220, 10%, 28%, 0.65);
-  --color-quinary: white;
-  --color-quinary-m: rgba(255, 255, 255, 0.5);
-}
+// color properties
+// $color-primary: #fa6e1c;
+// $color-primary: #ff9720;
+$color-primary: #ffc513;
+// $color-primary: #ffc825;
+$color-primary-dark: #b28451;
+$color-primary-light: #d4ba42;
+
+$color-secondary: #9415f5;
+$color-secondary-light: #ff724c;
+$color-secondary-dark: #730039;
+
+$color-light: #fff;
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+$color-grey-dark-3: #101d26;
+$color-grey-dark-4: #192329;
+$color-deep: #000;
+
+$color-1: #ffeb99;
+$color-1: #fdf2e9;
+$color-1: #fcf6e1;
+$color-2: #c0a22ba6;
+// Dark Color Palette
+// html[data-theme="dark"] {
+//   --color-primary: rgb(36, 38, 43);
+//   --color-primary-dark: rgba(36, 38, 43, 0.65);
+//   --color-primary-light: rgba(74, 75, 78, 0.65);
+//   --color-secondary: rgb(124, 185, 8);
+//   --color-secondary-light: rgba(123, 185, 8, 0.5);
+//   // --color-tertiary: rgb(38, 52, 65);
+//   // --color-tertiary-m: hsla(183, 34%, 38%, 0.65);
+//   // --color-quaternary: hsl(220, 10%, 28%);
+//   // --color-quaternary-m: hsla(220, 10%, 28%, 0.65);
+//   // --color-quinary: white;
+//   // --color-quinary-m: rgba(255, 255, 255, 0.5);
+// }
 // font-weights
 $font-weights: (
   "font-weight-light": 300,
@@ -54,7 +67,7 @@ $break-points: (
   "break-point-tabport": 700px,
   "break-point-tablet": 900px,
   "break-point-tabLand": 1100px,
-  "break-point-desktop": 1300px,
+  "break-point-desktop": 1700px,
 );
 @function break-point($break-point-style) {
   @return map-get($break-points, $break-point-style);
