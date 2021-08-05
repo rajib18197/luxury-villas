@@ -88,6 +88,12 @@
   //   transform: scaleX(1);
   // }
   //900px
+  @include media-tabLand {
+    grid-column: container-start/container-end;
+    grid-template-rows: min-content;
+    padding: 4vh 3vw;
+    // margin-bottom: 6rem;
+  }
   @include media-tablet {
     grid-column: container-start/container-end;
     grid-template-rows: min-content;
