@@ -28,6 +28,9 @@
   .interior__content {
     transform: rotate(0);
     padding: 2rem 4rem;
+    &--title {
+      font-size: 3rem;
+    }
   }
 }
 @include media-smaller {

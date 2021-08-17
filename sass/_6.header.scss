@@ -2,7 +2,7 @@
   font-family: "Josefin Sans", sans-serif;
   grid-column: container-start/container-end;
 
-  /*-------------------------------- Hamburger Functionality start------------------------------------*/
+  //Hamburger Functionality start
   &.open .header__menu--line {
     background-color: transparent;
   }
@@ -25,7 +25,9 @@
     display: none;
     z-index: 10;
   }
-  /*-------------------------------- Hamburger Functionality End------------------------------------*/
+  // Hamburger Functionality End
+
+  //Navigation start
   &__navigation {
     width: 100%;
     height: 7rem;
@@ -33,8 +35,6 @@
     display: flex;
     justify-content: space-evenly;
     background-color: $color-grey-dark-5;
-    // background-color: $color-primary;
-    // color: $color-deep;
     color: $color-light;
     overflow: hidden;
     &--logo {
@@ -59,13 +59,11 @@
     &--link:visited {
       font-size: 1.8rem;
       font-weight: 400;
-      // text-transform: uppercase;
       margin-right: 2vw;
       padding: 0 1.5rem;
       display: block;
       position: relative;
       transform-style: preserve-3d;
-      //   transform-origin: top;
       transform-origin: bottom;
       transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
@@ -79,12 +77,10 @@
       background-color: $color-secondary-dark;
       position: absolute;
       left: 0;
-      //bottom: -100%;
       top: -100%;
       width: 100%;
       padding: inherit;
       transform: rotateX(90deg);
-      //transform-origin: top;
       transform-origin: bottom;
     }
     //Creating Dark Mode Start
@@ -136,10 +132,12 @@
     }
     // Dark Mode End
   }
-  // Responsive With Media Query
+  // Navigation End
 
+  // Responsive With Media Query
   //900px
   @include media-tablet {
+    // Navigation
     &__navigation {
       position: fixed;
       top: 0;
@@ -188,6 +186,7 @@
         justify-content: center;
       }
     }
+    // hamburger Functionality
     &.open &__navigation {
       transform: rotateY(0);
     }
@@ -231,26 +230,6 @@
       opacity: 0.8;
       display: block;
     }
-  }
-}
-//animation
-@keyframes upwards {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes downwards {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+    // hamburger functionality end
   }
 }

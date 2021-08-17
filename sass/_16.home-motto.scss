@@ -32,42 +32,7 @@
       background-color: $color-grey-light-2;
     }
   }
-  &__btn:link,
-  &__btn:visited {
-    // font-family: "Josefin Sans", sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    height: 6rem;
-    position: relative;
-    justify-self: start;
-    font-weight: 400;
-    padding: 0 12rem;
-    line-height: 6rem;
-    span {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      line-height: 6rem;
-      background-color: $color-secondary-dark;
-      color: #fff;
-    }
-    span:nth-child(2) {
-      color: purple;
-      background-color: #fff;
-      transition: all 0.5s;
-      clip-path: polygon(61% 0, 100% 0%, 100% 100%, 60% 100%, 44% 48%);
-      &:hover {
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 56%);
-      }
-    }
-    span:nth-child(1):hover ~ span {
-      clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 56%);
-    }
-  }
+
   &__seenon-logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

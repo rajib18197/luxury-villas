@@ -36,8 +36,7 @@
       display: flex;
       gap: 5rem;
       align-items: center;
-      .icon-weather,
-      .icon-time {
+      svg {
         fill: $color-secondary;
         height: 4rem;
         width: 4rem;
@@ -49,17 +48,21 @@
       }
     }
   }
+  //Responsive with Media Query
+  // 1100px
   @include media-tabLand {
     grid-column: container-start/container-end;
     grid-template-rows: min-content;
     padding: 4vh 3vw;
     margin-bottom: 6rem;
   }
+  // 900px
   @include media-tablet {
     &__title {
       font-size: 3rem;
     }
   }
+  // 600px
   @include media-smaller {
     padding: 4rem 4rem;
     margin-bottom: 0;
@@ -75,6 +78,7 @@
       font-size: 1.5rem;
     }
   }
+  // 400px
   @include media-small {
     padding: 2rem;
     grid-template-rows: min-content;

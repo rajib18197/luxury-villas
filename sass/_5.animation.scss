@@ -1,3 +1,51 @@
+// Header Navigation Animation
+@keyframes upwards {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes downwards {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+// Header Navigation Animation END
+// Showcase Start
+@keyframes moveInTop {
+  0% {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(2rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+// Showcase END
 @keyframes spin {
   0% {
     opacity: 0;
