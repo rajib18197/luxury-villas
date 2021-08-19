@@ -6,33 +6,32 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   place-items: center;
-}
-.design__content {
-  transform: rotate(0.25turn);
+  &__heading {
+    transform: rotate(0.25turn);
 
-  &--title {
-    font-size: 4.5rem;
-    letter-spacing: 0.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: $color-light;
-  }
-}
-@include media-tabLand {
-  .design__content {
     &--title {
-      font-size: 3rem;
+      font-size: 4.5rem;
+      letter-spacing: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $color-light;
     }
   }
-}
-@include media-tablet {
-  .design-text {
+  @include media-tabLand {
+    &__heading {
+      &--title {
+        font-size: 3rem;
+      }
+    }
+  }
+  @include media-tablet {
     margin: 0;
     grid-column: container-start/container-end;
     grid-row: 5/6;
-  }
-  .design__content {
-    transform: rotate(0);
-    padding: 2rem 4rem;
+
+    &__heading {
+      transform: rotate(0);
+      padding: 2rem 4rem;
+    }
   }
 }

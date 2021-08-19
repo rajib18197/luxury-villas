@@ -11,11 +11,15 @@
   grid-column: container-start/col-end 6;
   padding: 3rem;
   color: $color-light;
+  @include media-tablet {
+    grid-column: container-start / container-end;
+  }
 }
 .motto {
   display: grid;
   grid-template-rows: 6rem min-content 1fr min-content;
   row-gap: 2rem;
+
   &__seenon-text {
     font-size: 1.6rem;
     display: grid;
@@ -45,70 +49,9 @@
       filter: brightness(80%);
     }
   }
-}
-.heading-2 {
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-  &::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 25%;
-    bottom: -1.5rem;
-    width: 20rem;
-    height: 0.3rem;
-    transform: translate(-50%);
-    background-color: $color-primary;
-  }
-}
-.paragraph {
-  font-family: "Josefin Sans", sans-serif;
-  width: 80%;
-  font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-  // text-align: center;
-  // padding: 1rem 0;
-}
-@include media-tabLand {
-  .motto {
-    &__btn:link,
-    &__btn:visited {
-      font-size: 1.4rem;
-      padding: 0 11rem;
-    }
-  }
-  .heading-2 {
-    font-size: 3.5rem;
-  }
-  .paragraph {
-    font-size: 1.4rem;
-  }
-}
-@include media-tablet {
-  .home-motto {
-    grid-column: container-start / container-end;
-  }
-}
-@include media-tabport {
-  .heading-2 {
-    font-size: 2.8rem;
-    &::after {
-      left: 38%;
-      bottom: -0.5rem;
-      transform: translate(-50%);
-    }
-  }
-  .paragraph {
-    font-size: 1.3rem;
-    padding: 0;
-    width: 100%;
-  }
-  .motto {
+  //Responsiveness
+
+  @include media-tabport {
     &__seenon-logos {
       column-gap: 2rem;
       margin-bottom: 1rem;

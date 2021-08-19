@@ -12,6 +12,10 @@
     text-transform: uppercase;
     color: $color-primary;
   }
+  @include media-tablet {
+    grid-column: container-start / container-end;
+    padding: 2rem;
+  }
 }
 .realtors {
   &__list {
@@ -39,27 +43,21 @@
     margin-top: -0.5rem;
     color: #aaa;
   }
-}
-@include media-tabLand {
-  .realtors {
+  @include media-tabLand {
     &__name {
       font-size: 1.8rem;
     }
   }
-}
-@include media-tablet {
-  .home-realtors {
-    grid-column: container-start / container-end;
-    padding: 2rem;
-  }
-  .realtors {
+  @include media-tablet {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
+    &__name {
+      font-size: 1.6rem;
+      letter-spacing: 0;
+    }
   }
-}
-@include media-tabport {
-  .realtors {
+  @include media-tabport {
     grid-template-columns: 1fr;
   }
 }

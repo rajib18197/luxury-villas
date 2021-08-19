@@ -1,177 +1,147 @@
 .interior-content {
   margin: 5rem 0;
   grid-column: col-start 2 / container-end;
+  @include media-tablet {
+    grid-column: container-start / container-end;
+    margin: 0;
+  }
 }
-.interior__images {
+.interior-information {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50rem;
+  grid-template-rows: 52rem;
   overflow: hidden;
-  img {
+  &__img-1,
+  &__img-2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-}
-.image-1:hover,
-.image-2:hover {
-  filter: contrast(1.7) brightness(80%);
-}
-.image-1:hover .interior__about--1 {
-  display: block;
-}
-.image-2:hover .interior__about--2 {
-  display: block;
-}
-.image-1 {
-  border-right: 0.5rem solid $color-primary;
-}
-.image-1,
-.image-2 {
-  transition: all 0.6s;
-  overflow: hidden;
-}
-.interior__about--1,
-.interior__about--2 {
-  font-family: "Josefin Sans", sans-serif;
-  width: 80%;
-  outline: 2rem solid rgba(162, 7, 7, 0.7);
-  outline-offset: -2rem;
-  position: absolute;
-  // z-index: 10;
-  display: none;
-  padding: 2rem;
-  color: #fff;
-  h2 {
-    background-color: var(--color-primary);
-    background-color: rgba(54, 6, 56, 0.802);
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    position: relative;
-    color: #fff;
+
+  &__details-1:hover,
+  &__details-2:hover {
+    filter: contrast(1.7) brightness(80%);
   }
-  p {
-    background-color: rgba(54, 6, 56, 0.802);
-    text-align: center;
+  &__details-1:hover .interior-information__about--1 {
+    display: block;
+  }
+  &__details-2:hover .interior-information__about--2 {
+    display: block;
+  }
+  &__details-1 {
+    border-right: 0.5rem solid $color-primary;
+  }
+  &__details-1,
+  &__details-2 {
+    position: relative;
+    transition: all 0.6s;
+    overflow: hidden;
+  }
+
+  &__about--1,
+  &__about--2 {
+    font-family: "Josefin Sans", sans-serif;
+    width: 75%;
+    outline: 2rem solid rgba(162, 7, 7, 0.7);
+    outline: 2rem solid $color-primary;
+    outline-offset: -2rem;
+    position: absolute;
+    z-index: 10;
+    display: none;
     padding: 2rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    position: relative;
-    color: #fff;
-  }
-}
-.interior__about--1 {
-  top: 50%;
-  left: 0;
-  animation: moveInLeft 2s ease-in-out;
-  animation-fill-mode: forwards;
-}
-.interior__about--2 {
-  bottom: 50%;
-  right: 0;
-  animation: moveInRight 2s ease-in-out;
-  animation-fill-mode: forwards;
-}
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translate(-25rem, -15rem);
-  }
-  30% {
-    transform: translate(5rem, -15rem);
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-    transform: translate(5rem, -1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(1rem, -1rem);
-  }
-}
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translate(25rem, 15rem);
-  }
-  50% {
-    transform: translate(-5rem, 15rem);
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-    transform: translate(-5rem, 1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-1rem, 1rem);
-  }
-}
-//responsive
-@include media-tabLand {
-  .interior__about--1,
-  .interior__about--2 {
-    width: 85%;
-    p {
-      font-size: 1.5rem;
-      padding: 2rem;
-    }
-  }
-}
-
-@include media-tablet {
-  .interior-content {
-    grid-column: container-start / container-end;
-    margin: 0;
-  }
-  .interior__images {
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  }
-  .image-1 {
-    border-right: 0;
-  }
-
-  .interior__about--1,
-  .interior__about--2 {
-    width: 90%;
-    p {
-      font-size: 1.4rem;
+    color: $color-grey-light-1;
+    background-color: rgba(#101d36, 0.702);
+    background-color: #02102bd0;
+    h2 {
+      background-color: var(--color-primary);
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
       padding: 1rem;
+      padding-bottom: 0.5rem;
     }
-  }
-}
-@include media-tabport {
-  .interior__about--1,
-  .interior__about--2 {
     p {
-      font-size: 1.6rem;
-      padding: 1.5rem;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      position: relative;
     }
   }
-}
-@include media-smaller {
-  .interior__about--1 {
-    display: block;
-    top: 5%;
+  &__about--1 {
+    top: 50%;
     left: 0;
-    animation: none;
+    animation: moveInLeft 2s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  &__about--2 {
+    bottom: 50%;
+    right: 0;
+    animation: moveInRight 2s ease-in-out;
+    animation-fill-mode: forwards;
   }
 
-  .interior__about--2 {
-    display: block;
-    bottom: 5%;
-    right: 0;
-    animation: none;
+  //////////////////////////////////////////////////// Responsiveness//////////////////////////////////////////////////////
+  @include media-tabLand {
+    &__about--1,
+    &__about--2 {
+      width: 85%;
+      padding: 1rem;
+      h2 {
+        font-size: 1.7rem;
+      }
+      p {
+        font-size: 1.35rem;
+        padding: 0.7rem;
+      }
+    }
   }
-  .interior__about--1,
-  .interior__about--2 {
-    width: 90%;
-    p {
-      font-size: 1.3rem;
+  @include media-tablet {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    &__about--1 {
+      display: block;
+      top: 5%;
+      left: 2%;
+      animation: none;
+    }
+    &__about--2 {
+      display: block;
+      bottom: 5%;
+      right: 2%;
+      animation: none;
+    }
+    &__details-1 {
+      border-right: 0;
+    }
+    &__about--1,
+    &__about--2 {
+      width: 90%;
+      p {
+        font-size: 1.4rem;
+        padding: 1rem;
+      }
+    }
+  }
+  @include media-tabport {
+    &__about--1,
+    &__about--2 {
+      width: 70%;
+      p {
+        font-size: 1.6rem;
+        padding: 1.5rem;
+      }
+    }
+  }
+  @include media-smaller {
+    &__about--1,
+    &__about--2 {
+      width: 80%;
+      p {
+        font-size: 1.3rem;
+      }
     }
   }
 }

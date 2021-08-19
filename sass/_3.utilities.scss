@@ -5,13 +5,24 @@ html {
   }
 }
 ::selection {
-  background-color: yellowgreen;
+  background-color: #5c5c5c;
   color: #fff;
 }
 body {
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
   line-height: 1.8;
+}
+
+li {
+  list-style: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-quinary);
+  letter-spacing: 0.2rem;
+  font-weight: 400;
 }
 
 .container {
@@ -23,15 +34,4 @@ body {
     )
     [center-end] minmax(6rem, 1fr) 1fr [container-end];
   grid-template-rows: max-content 85vh repeat(9, min-content);
-}
-li {
-  list-style: none;
-}
-a:link,
-a:visited {
-  text-decoration: none;
-  color: var(--color-quinary);
-  letter-spacing: 0.2rem;
-  font-weight: font-weight(font-weight-light);
-  font-size: font-size(font-size-medium);
 }

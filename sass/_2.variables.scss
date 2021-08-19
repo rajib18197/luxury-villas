@@ -1,7 +1,7 @@
 // color properties
-$color-primary: #ff610b;
-
 $color-primary: #ffc825;
+$color-primary: #ff610b;
+$color-primary-light: rgb(255, 125, 56);
 
 $color-secondary-dark: #730039;
 $color-secondary: #9415f5;
@@ -19,36 +19,34 @@ $color-grey-dark-5: #101d36;
 $color-grey-dark-6: #333;
 $color-grey-dark-7: #555;
 
-// font-weights
-$font-weights: (
-  "font-weight-light": 300,
-  "font-weight-regular": 400,
-  "font-weight-medium": 500,
-  "font-weight-bold": 700,
-);
-@function font-weight($font-weight-style) {
-  @return map-get($font-weights, $font-weight-style);
+// placeholder
+
+//background property
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-//font-sizes
-$font-sizes: (
-  "font-size-small": 1.2rem,
-  "font-size-regular": 1.5rem,
-  "font-size-medium": 1.7rem,
-  "font-size-extra-medium": 2rem,
-  "font-size-large": 2.5rem,
-  "font-size-larger": 3.5rem,
-  "font-size-largest": 6rem,
-);
-@function font-size($font-size-style) {
-  @return map-get($font-sizes, $font-size-style);
+
+// Section padding
+%section-padding {
+  padding: 6vh 4vw;
 }
+
+// Responsiveness
 $break-points: (
-  "break-point-small": 400px,
-  "break-point-smaller": 600px,
-  "break-point-tabport": 700px,
-  "break-point-tablet": 900px,
-  "break-point-tabLand": 1100px,
-  "break-point-desktop": 1700px,
+  "break-point-small": 25em,
+  //400px
+  "break-point-smaller": 37.5em,
+  //600px
+  "break-point-tabport": 43.75em,
+  //700px
+  "break-point-tablet": 56.25em,
+  //900px
+  "break-point-tabLand": 68.75em,
+  //1100px
+  "break-point-desktop": 93.75em,
+  //1500px
 );
 @function break-point($break-point-style) {
   @return map-get($break-points, $break-point-style);

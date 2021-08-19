@@ -58,3 +58,41 @@
     opacity: 0;
   }
 }
+// design content animation
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-25rem, -15rem);
+  }
+  30% {
+    transform: translate(5rem, -15rem);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    transform: translate(5rem, -1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(1rem, -1rem);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(25rem, 15rem);
+  }
+  50% {
+    transform: translate(-5rem, 15rem);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-5rem, 1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-1rem, 1rem);
+  }
+}

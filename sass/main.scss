@@ -3,26 +3,31 @@
     @content;
   }
 }
+
 @mixin media-tabLand {
   @media only screen and(max-width:break-point(break-point-tabLand)) {
     @content;
   }
 }
+
 @mixin media-tablet {
   @media only screen and (max-width: break-point(break-point-tablet)) {
     @content;
   }
 }
+
 @mixin media-tabport {
   @media only screen and (max-width: break-point(break-point-tabport)) {
     @content;
   }
 }
+
 @mixin media-smaller {
   @media only screen and (max-width: break-point(break-point-smaller)) {
     @content;
   }
 }
+
 @mixin media-small {
   @media only screen and (max-width: break-point(break-point-small)) {
     @content;
@@ -49,44 +54,3 @@
 @import "18.gallery";
 @import "19.testimonials";
 @import "20.footer";
-// placeholder
-//background property
-%bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-// Section padding
-%section-padding {
-  padding: 6vh 4vw;
-}
-// section heading (h2)
-%section-h2 {
-  font-size: font-size(font-size-extra-medium);
-  font-weight: font-weight(font-weight-light);
-  letter-spacing: 0.2rem;
-  color: var(--color-quinary);
-}
-// section heading(h3)
-%section-h3 {
-  font-size: font-size(font-size-medium);
-  color: var(--color-quinary);
-}
-//section-heading(h4)
-%section-h4 {
-  color: var(--color-quinary);
-}
-// section-heading(p)
-%section-paragraph {
-  font-size: font-size(font-size-medium);
-  color: var(--color-quinary);
-  line-height: 0.2rem;
-}
-// Dark -mode transition for all html Elements
-html.transition,
-html.transition *,
-html.transition *::before,
-html.transition *::after {
-  transition: all 0.5s !important;
-  transition-delay: 0 !important ;
-}
