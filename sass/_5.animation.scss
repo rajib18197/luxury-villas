@@ -1,4 +1,4 @@
-// Header Navigation Animation
+//******************* Header Navigation Animation Start *******************//
 @keyframes upwards {
   from {
     transform: translateY(100%);
@@ -19,8 +19,9 @@
     opacity: 1;
   }
 }
-// Header Navigation Animation END
-// Showcase Start
+//******************* Header Navigation Animation END *******************//
+
+//******************* Showcase START *******************//
 @keyframes moveInTop {
   0% {
     transform: translateY(-5rem);
@@ -45,7 +46,9 @@
     opacity: 1;
   }
 }
-// Showcase END
+//******************* Showcase END *******************//
+
+//******************* Footer Animation START *******************//
 @keyframes spin {
   0% {
     opacity: 0;
@@ -58,7 +61,9 @@
     opacity: 0;
   }
 }
-// design content animation
+//******************* Footer Animation END *******************//
+
+//******************* Design Content Animation START *******************//
 
 @keyframes moveInLeft {
   0% {
@@ -96,3 +101,4 @@
     transform: translate(-1rem, 1rem);
   }
 }
+//******************* Design Content Animation END *******************//

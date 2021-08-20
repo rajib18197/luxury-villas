@@ -2,7 +2,7 @@
   font-family: "Josefin Sans", sans-serif;
   grid-column: container-start/container-end;
 
-  //Hamburger Functionality start
+  //**************** Hamburger Functionality start *******************//
   &.open .header__menu--line {
     background-color: transparent;
   }
@@ -25,9 +25,9 @@
     display: none;
     z-index: 10;
   }
-  // Hamburger Functionality End
+  //**************** Hamburger Functionality End *******************//
 
-  //Navigation start
+  //**************** Navigation Start *******************//
   &__navigation {
     width: 100%;
     height: 7rem;
@@ -57,11 +57,11 @@
     }
     &--link:link,
     &--link:visited {
+      display: block;
       font-size: 1.8rem;
-      font-weight: 300;
+      font-weight: 400;
       margin-right: 2vw;
       padding: 0 1.5rem;
-      display: block;
       position: relative;
       transform-style: preserve-3d;
       transform-origin: bottom;
@@ -83,7 +83,8 @@
       transform: rotateX(90deg);
       transform-origin: bottom;
     }
-    //Creating Dark Mode Start
+    //**************** Dark Mode Start *******************//
+
     &--toggle {
       display: flex;
       align-items: center;
@@ -101,10 +102,10 @@
         transition: all 0.2s ease-in-out;
       }
       input:checked[type="checkbox"] {
-        background-color: $color-secondary;
+        background-color: $color-grey-dark-5;
       }
       input:not(:checked)[type="checkbox"] {
-        background-color: $color-secondary-dark;
+        background-color: $color-primary;
       }
       input[type="checkbox"]::after,
       input[type="checkbox"]::before {
@@ -114,7 +115,7 @@
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 50%;
-        background-color: $color-primary;
+        background-color: $color-secondary;
         transition: all 0.2s ease-in-out;
       }
       input[type="checkbox"]::after {
@@ -130,20 +131,20 @@
         right: 38%;
       }
     }
-    // Dark Mode End
+    //**************** Dark Mode End *******************//
   }
-  // Navigation End
+  //**************** Navigation End *******************//
 
-  // Responsive With Media Query
-  //900px
+  //**************** Responsiveness Start *******************//
+  // (max-width) 900px ==> 56.25em
   @include media-tablet {
-    // Navigation
+    //****** Navigation Start ******//
     &__navigation {
       position: fixed;
       top: 0;
       left: 0;
       width: 25rem;
-      height: 105vh;
+      height: 100vh;
       flex-direction: column;
       z-index: 20;
       text-align: center;
@@ -186,7 +187,8 @@
         justify-content: center;
       }
     }
-    // hamburger Functionality
+
+    //**************** Hamburger Functionality Start *******************//
     &.open &__navigation {
       transform: rotateY(0);
     }
@@ -207,8 +209,8 @@
         &::before,
         &::after {
           content: "";
-          height: 0.3rem;
-          width: 3.5rem;
+          height: 0.29rem;
+          width: 2.7rem;
           position: absolute;
           top: 0;
           left: 0;
@@ -230,6 +232,6 @@
       opacity: 0.8;
       display: block;
     }
-    // hamburger functionality end
+    //**************** Hamburger Functionality End *******************//
   }
 }

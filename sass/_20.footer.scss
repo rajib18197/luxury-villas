@@ -1,5 +1,4 @@
 .footer {
-  background-color: $color-grey-dark-3;
   background-color: $color-secondary-dark;
   color: $color-light;
   grid-column: container-start/container-end;
@@ -74,6 +73,9 @@
       animation-delay: 0.6s;
     }
   }
+
+  //**************** Responsiveness Start *******************//
+  // (max-width) 900px ==> 56.25em
   @include media-tablet {
     padding-top: 20rem;
     grid-template-columns: 1fr;

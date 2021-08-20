@@ -12,6 +12,9 @@
     text-transform: uppercase;
     color: $color-primary;
   }
+
+  //**************** Responsiveness Start *******************//
+  // (max-width) 900px ==> 56.25em
   @include media-tablet {
     grid-column: container-start / container-end;
     padding: 2rem;
@@ -43,11 +46,15 @@
     margin-top: -0.5rem;
     color: #aaa;
   }
+
+  //**************** Responsiveness Start *******************//
+  // (max-width) 1100px ==> 68.75em
   @include media-tabLand {
     &__name {
       font-size: 1.8rem;
     }
   }
+  // (max-width) 900px ==> 56.25em
   @include media-tablet {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -57,6 +64,7 @@
       letter-spacing: 0;
     }
   }
+  // (max-width) 700px ==> 43.25em
   @include media-tabport {
     grid-template-columns: 1fr;
   }

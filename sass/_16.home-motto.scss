@@ -11,6 +11,9 @@
   grid-column: container-start/col-end 6;
   padding: 3rem;
   color: $color-light;
+
+  //**************** Responsiveness Start *******************//
+  // (max-width) 900px ==> 56.25em
   @include media-tablet {
     grid-column: container-start / container-end;
   }
@@ -49,7 +52,9 @@
       filter: brightness(80%);
     }
   }
-  //Responsiveness
+
+  //**************** Responsiveness Start *******************//
+  // (max-width) 700px ==> 43.75em
 
   @include media-tabport {
     &__seenon-logos {

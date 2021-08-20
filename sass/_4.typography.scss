@@ -1,4 +1,4 @@
-//Booking-text & testimonials Button
+//******************* Booking-text & testimonials Button *******************//
 .btn-text {
   &:link,
   &:visited {
@@ -65,7 +65,7 @@
   background-color: $color-primary;
 }
 
-//Home-Motto Button ==> Button Special
+//****************** Home-Motto Button ==> Button Special *******************//
 .btn-special:link,
 .btn-special:visited {
   font-size: 1.5rem;
@@ -110,7 +110,7 @@
     padding: 0 10rem;
   }
 }
-// Homes Button
+//******************* Homes Button *******************//
 .btn {
   &,
   &:link,
@@ -155,7 +155,7 @@
   // }
 }
 
-// heading
+//******************* Heading *******************//
 .heading-2 {
   font-size: 4rem;
   font-weight: 400;
@@ -197,8 +197,9 @@
   text-shadow: 3px 0px 10px rgba(var(--color-deep), 0.4),
     -3px 0px 10px rgba(var(--color-light), 0.4);
   animation: moveInTop 1s ease-in-out;
-  // Responsiveness
-  //400px
+
+  //**************** Responsiveness Start *******************//
+  // (max-width) 400px ==> 25em
   @include media-small {
     .heading-3 {
       font-size: 1.3rem;
@@ -234,7 +235,7 @@
   letter-spacing: 0.2rem;
 }
 
-//paragraph
+//******************* Paragraph *******************//
 .paragraph {
   font-family: "Josefin Sans", sans-serif;
   width: 80%;

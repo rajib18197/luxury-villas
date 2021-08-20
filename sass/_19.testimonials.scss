@@ -8,6 +8,8 @@
   row-gap: 10rem;
   place-content: center;
 
+  //**************** Responsiveness Start *******************//
+  // (max-width) 900px ==> 56.25em
   @include media-tablet {
     row-gap: 20rem;
     margin: 15rem 0;
@@ -65,12 +67,6 @@
       transform: rotateY(180deg);
       // transform: perspective(100rem) rotateY(0.5turn);
       background-color: #54483a;
-      // background-image: linear-gradient(
-      //     to right,
-      //     rgba(16, 29, 38, 0.83),
-      //     rgba(16, 29, 38, 0.83)
-      //   ),
-      //   url(../img/house-3.jpeg);
       @extend %bg;
       color: $color-light;
       a:link,
@@ -150,7 +146,9 @@
     transform: rotateY(0);
     // transform: perspective(100rem) rotateY(0turn);
   }
-  //Responsiveness
+
+  //**************** Responsiveness Start *******************//
+  // (max-width) 900px ==> 56.25em
   @include media-tablet {
     .card {
       height: auto;

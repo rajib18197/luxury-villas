@@ -5,3 +5,35 @@
   padding: 0;
   box-sizing: inherit;
 }
+
+html {
+  font-size: 62.5%;
+  //**************** Responsiveness Start *******************//
+  // (min-width) 1500px ==> 93.75em
+  @include media-desktop {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.8;
+}
+
+//******************* Grid Container / Overall Layout *******************//
+.container {
+  display: grid;
+  grid-template-columns:
+    [container-start] 1fr minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) 1fr [container-end];
+  grid-template-rows: max-content 85vh repeat(9, min-content);
+}
+
+::selection {
+  background-color: #5c5c5c;
+  color: #fff;
+}

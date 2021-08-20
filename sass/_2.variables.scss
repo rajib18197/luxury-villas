@@ -1,7 +1,6 @@
-// color properties
+//******************* Color Properties *******************//
 $color-primary: #ffc825;
 $color-primary: #ff610b;
-$color-primary-light: rgb(255, 125, 56);
 
 $color-secondary-dark: #730039;
 $color-secondary: #9415f5;
@@ -19,21 +18,21 @@ $color-grey-dark-5: #101d36;
 $color-grey-dark-6: #333;
 $color-grey-dark-7: #555;
 
-// placeholder
+//******************* Placeholder *******************//
 
-//background property
+//* Background Property *//
 %bg {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-// Section padding
+//* Section padding *//
 %section-padding {
   padding: 6vh 4vw;
 }
 
-// Responsiveness
+//******************* Responsiveness Breakpoints *******************//
 $break-points: (
   "break-point-small": 25em,
   //400px
@@ -48,6 +47,7 @@ $break-points: (
   "break-point-desktop": 93.75em,
   //1500px
 );
+
 @function break-point($break-point-style) {
   @return map-get($break-points, $break-point-style);
 }
