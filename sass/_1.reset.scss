@@ -9,9 +9,18 @@
 html {
   font-size: 62.5%;
   //**************** Responsiveness Start *******************//
-  // (min-width) 1500px ==> 93.75em
-  @include media-desktop {
-    font-size: 75%;
+  // (min-width) 400px ==> 25em
+  // problem?
+  // @include media-small {
+  //   font-size: 50%;
+  // }
+  // //**************** Responsiveness Start *******************//
+  // // (min-width) 1500px ==> 93.75em
+  // @include media-desktop {
+  //   font-size: 75%;
+  // }
+  @media screen and (max-width: 25em) {
+    font-size: 50%;
   }
 }
 

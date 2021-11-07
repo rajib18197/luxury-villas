@@ -2,9 +2,8 @@
   margin: 15rem 0;
   grid-column: center-start/center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 35rem);
-  // grid-template-columns: repeat(auto-fit, 35rem);
-  column-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 8rem;
   row-gap: 10rem;
   place-content: center;
 
