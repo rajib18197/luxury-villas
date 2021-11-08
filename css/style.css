@@ -9,7 +9,7 @@ html {
   font-size: 62.5%; }
   @media screen and (max-width: 25em) {
     html {
-      font-size: 50%; } }
+      font-size: 47%; } }
 
 body {
   box-sizing: border-box;
@@ -49,7 +49,9 @@ a:visited {
   text-transform: uppercase;
   font-size: 1.7rem;
   font-weight: 500;
-  position: relative; }
+  color: #444;
+  position: relative;
+  transition: all 0.2s; }
   @media only screen and (max-width: 25em) {
     .btn-text:link:link, .btn-text:link:visited, .btn-text:visited:link, .btn-text:visited:visited {
       padding: 1.5rem 2rem;
@@ -204,6 +206,11 @@ a:visited {
         left: 38%;
         bottom: -0.5rem;
         transform: translate(-50%); } }
+  @media only screen and (max-width: 43.75em) and (max-width: 25em) {
+    .heading-2 {
+      font-size: 2.2rem; }
+      .heading-2::after {
+        bottom: 1.3rem; } }
 
 .heading-3 {
   font-size: 1.6rem;
@@ -592,17 +599,19 @@ a:visited {
       .showcase__links--1:link, .showcase__links--1:visited, .showcase__links--2:link, .showcase__links--2:visited {
         padding: 1.4rem 3.2rem; } }
   @media only screen and (max-width: 37.5em) {
-    .showcase__title {
-      font-size: 4.8rem; }
-    .showcase__paragraph {
-      font-size: 1.6rem; }
-    .showcase__links {
-      justify-content: flex-start; }
-      .showcase__links--1:link, .showcase__links--1:visited, .showcase__links--2:link, .showcase__links--2:visited {
-        padding: 1.1rem 2.5rem;
-        font-size: 1.4rem;
-        display: inline-block;
-        text-align: left; } }
+    .showcase {
+      align-items: center; }
+      .showcase__title {
+        font-size: 4.8rem; }
+      .showcase__paragraph {
+        font-size: 1.6rem; }
+      .showcase__links {
+        justify-content: flex-start; }
+        .showcase__links--1:link, .showcase__links--1:visited, .showcase__links--2:link, .showcase__links--2:visited {
+          padding: 1.1rem 1.6rem;
+          font-size: 1.3rem;
+          display: inline-block;
+          text-align: left; } }
   @media only screen and (max-width: 25em) {
     .showcase__title {
       font-size: 4.2rem; }
@@ -1091,6 +1100,9 @@ a:visited {
   @media only screen and (max-width: 56.25em) {
     .home-motto {
       grid-column: container-start / container-end; } }
+  @media only screen and (max-width: 25em) {
+    .home-motto {
+      padding: 1rem; } }
 
 .motto {
   display: grid;

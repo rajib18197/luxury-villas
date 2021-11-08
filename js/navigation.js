@@ -6,3 +6,4 @@ menu.addEventListener("click", function () {
   header.classList.toggle("open");
   overlay.classList.toggle(".open");
 });
+// dark mode

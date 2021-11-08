@@ -17,6 +17,9 @@
   @include media-tablet {
     grid-column: container-start / container-end;
   }
+  @include media-small {
+    padding: 1rem;
+  }
 }
 .motto {
   display: grid;

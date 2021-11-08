@@ -9,7 +9,9 @@
     text-transform: uppercase;
     font-size: 1.7rem;
     font-weight: 500;
+    color: #444;
     position: relative;
+    transition: all 0.2s;
     // Responsiveness
     // 400px
     @include media-small {
@@ -185,6 +187,12 @@
       left: 38%;
       bottom: -0.5rem;
       transform: translate(-50%);
+    }
+    @include media-small {
+      font-size: 2.2rem;
+      &::after {
+        bottom: 1.3rem;
+      }
     }
   }
 }
